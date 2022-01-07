@@ -1,3 +1,10 @@
+## [1.1.0-next.3](https://github.com/DailyBreakfast/www/compare/v1.1.0-next.2...v1.1.0-next.3) (2022-01-07)
+
+
+### :bug: Fixes
+
+* Cypress-Run korrigiert ([ec5b76a](https://github.com/DailyBreakfast/www/commit/ec5b76abfacbfbcacd73d033c05e0d3ca846f8ed))
+
 ## [1.1.0-next.2](https://github.com/DailyBreakfast/www/compare/v1.1.0-next.1...v1.1.0-next.2) (2022-01-07)
 
 
