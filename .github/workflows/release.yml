@@ -16,6 +16,7 @@ jobs:
       - name: Fetch Version
         run: semantic-release --generate-notes false --dry-run
         with:
+          name: Versioning
           path: |
             package.json
             CHANGELOG.md
@@ -24,6 +25,7 @@ jobs:
           touch CHANGELOG.md
           semantic-release
         with:
+          name: Versioning
           path: |
             package.json
             CHANGELOG.md
