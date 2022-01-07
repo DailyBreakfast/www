@@ -1,3 +1,10 @@
+## [1.1.0-next.4](https://github.com/DailyBreakfast/www/compare/v1.1.0-next.3...v1.1.0-next.4) (2022-01-07)
+
+
+### :bug: Fixes
+
+* Cypress-Aktions korrigiert ([51656ec](https://github.com/DailyBreakfast/www/commit/51656ecee210d181f7c01d11ad1b4f360dc5f27b))
+
 ## [1.1.0-next.3](https://github.com/DailyBreakfast/www/compare/v1.1.0-next.2...v1.1.0-next.3) (2022-01-07)
 
 
