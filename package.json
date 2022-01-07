@@ -75,7 +75,7 @@
     "cypress-axe": "^0.13.0",
     "eslint": "^8.5.0",
     "jasmine-core": "~3.10.1",
-    "jest": "^27.4.5",
+    "jest": "^27.4.7",
     "jest-junit": "^13.0.0",
     "jest-preset-angular": "^11.0.1",
     "replace-json-property": "^1.8.0",
