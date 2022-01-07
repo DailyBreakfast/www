@@ -1,0 +1,142 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+@use "../../../theme" as myt;
+
+.hero {
+  height: 70vh;
+  text-align: center;
+  overflow: hidden;
+  padding-bottom: 5rem;
+  position: relative;
+
+  img {
+    position: absolute;
+    z-index: -3;
+    min-width: 100%;
+    top: 0;
+  }
+
+  .hero-content {
+    background-color: rgba(255, 255, 255, .8);
+    padding: 3rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 3px 9px rgba(0, 0, 0, .08);
+
+    h1 {
+      font-size: 4rem;
+      line-height: 3.5rem;
+
+      small {
+        font-size: 1.8rem;
+        line-height: 1rem;
+      }
+    }
+
+    mat-form-field {
+      width: calc(100% - 90px);
+    }
+
+    button {
+      margin-top: 4px;
+      margin-left: 4px;
+      line-height: 51px;
+    }
+  }
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline-start, .mat-form-field-appearance-outline .mat-form-field-outline-end {
+  background-color: rgba(241, 241, 241, 1);
+  border-radius: 6px;
+}
+
+section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+
+    b {
+      color: mat.get-color-from-palette(myt.$my-primary, 800) !important;
+    }
+  }
+
+  &.reader-element {
+    .reader {
+      text-align: center;
+
+      img {
+        aspect-ratio: 16/9;
+        width: 100%;
+      }
+
+      h3 {
+        font-weight: bold;
+      }
+    }
+
+    .spacer {
+      height: 176px;
+    }
+  }
+  &.delivery-elements {
+    text-align: center;
+  }
+  &.leistung-element {
+    h2, h3 {
+      text-align: center;
+      font-weight: bold;
+    }
+
+    mat-card-header {
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
+
+mat-card-header {
+  position: relative;
+  padding-top: 2rem;
+
+  .card-icon {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: mat.get-color-from-palette(myt.$my-primary, 800) !important;
+    color: mat.get-color-from-palette(myt.$my-primary, 800-contrast) !important;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    overflow: hidden;
+    top: -20px;
+  }
+  mat-list {
+    mat-icon {
+      color: mat.get-color-from-palette(myt.$my-primary, 800) !important;
+    }
+  }
+}
+.footer {
+  background-color: mat.get-color-from-palette(myt.$my-primary, 800) !important;
+  color: mat.get-color-from-palette(myt.$my-primary, 800-contrast) !important;
+  h3 {
+    font-weight: bold;
+  }
+  .footer-nav-item {
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .hero {
+    height: 100vh;
+  }
+  .spacer {
+    width: 100%;
+    text-align: center;
+  }
+}

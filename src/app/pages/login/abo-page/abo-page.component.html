@@ -1,0 +1,97 @@
+<div class="abo">
+  <div class="container">
+    <h1>Ihr Abo ändern</h1>
+    <mat-stepper orientation="vertical" [linear]="isLinear" #stepper>
+      <mat-step state="pick">
+        <ng-template matStepLabel>Paket auswählen</ng-template>
+        <div class="plans">
+          <mat-card>
+            <mat-card-title>Free 🌱</mat-card-title>
+            <mat-card-content>
+              Der Start auf eine Bestellplatform, damit Ihr Lieferdienst noch mehr Verkäufe erzielt.<br><b>Nur für
+              begrenzte Zeit verfügbar</b>
+            </mat-card-content>
+            <mat-card-actions class="head-action">
+              <span><b>1,50 €</b> / pro Vermittlung</span>
+              <button mat-button color="accent">Details
+                <mat-icon>expand_more</mat-icon>
+              </button>
+            </mat-card-actions>
+            <mat-card-content class="head-content">
+              <mat-list>
+                <mat-list-item>
+                  <mat-icon mat-list-icon>done</mat-icon>
+                  <div mat-line>Einfache und direkte Bestellung</div>
+                </mat-list-item>
+                <mat-list-item>
+                  <mat-icon mat-list-icon>done</mat-icon>
+                  <div mat-line>Direkte Verbindung zu Ihrem Lieferdienst</div>
+                </mat-list-item>
+                <mat-list-item>
+                  <mat-icon mat-list-icon>done</mat-icon>
+                  <div mat-line>Übersicht über Ihre Verkäufe und Besucher</div>
+                </mat-list-item>
+              </mat-list>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-flat-button color="accent" style="width: 100%;">Packet auswählen</button>
+            </mat-card-actions>
+          </mat-card>
+          <mat-card>
+            <mat-card-title>Premium 🚀</mat-card-title>
+            <mat-card-content>
+              Seien Sie noch mehr present mit unsere Marketing-Tools, um Werbung für Ihren Lieferdienst zu schalten
+            </mat-card-content>
+            <mat-card-actions class="head-action">
+              <span><b>5,00 €</b> / pro Vermittlung</span>
+              <button mat-button color="accent">Details
+                <mat-icon>expand_more</mat-icon>
+              </button>
+            </mat-card-actions>
+            <mat-card-content class="head-content">
+              <mat-list>
+                <mat-list-item>
+                  <mat-icon mat-list-icon>done</mat-icon>
+                  <div mat-line>Alle Funktionen aus Free</div>
+                </mat-list-item>
+                <mat-list-item>
+                  <mat-icon mat-list-icon>done</mat-icon>
+                  <div mat-line>Priorisierte Darstellung bei der Übersicht. Seien Sie über den kostenlosen Zugängen
+                  </div>
+                </mat-list-item>
+                <mat-list-item>
+                  <mat-icon mat-list-icon>done</mat-icon>
+                  <div mat-line>Optimierte Google-Suche für Ihren Lieferdienst</div>
+                </mat-list-item>
+              </mat-list>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-flat-button color="accent" style="width: 100%;">Packet auswählen</button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+        <div>
+          <button mat-button matStepperNext>Zur Zahlungsoption</button>
+        </div>
+      </mat-step>
+      <mat-step state="pay">
+        <div class="billing">
+          <ng-template matStepLabel>Zahlungsoption auswählen</ng-template>
+          <button mat-stroked-button><img src="./assets/images/PayPal-Logo.wine.svg" height="50px"
+                                          alt="Google Logo"><span>PayPal</span></button>
+          <button mat-stroked-button><img src="./assets/images/Google_Pay-Logo.wine%20(1).svg" height="50px"
+                                          alt="Google Logo"><span>Google Pay</span></button>
+          <button mat-stroked-button><img src="./assets/images/Apple_Pay-Logo.wine.svg" height="50px"
+                                          alt="Google Logo"><span>Apple Pay</span></button>
+        </div>
+      </mat-step>
+      <ng-template matStepperIcon="pick">
+        <mat-icon>add_shopping_cart</mat-icon>
+      </ng-template>
+      <ng-template matStepperIcon="pay">
+        <mat-icon>credit_score</mat-icon>
+      </ng-template>
+    </mat-stepper>
+  </div>
+</div>
+

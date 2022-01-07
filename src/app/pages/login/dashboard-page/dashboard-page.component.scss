@@ -1,0 +1,153 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+@use "../../../../theme" as myt;
+
+.dashboard {
+  height: calc(100vh - 64px);
+
+  .container {
+    display: flex;
+    padding: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .split-top {
+      flex: 0 0 100%;
+      width: 100%;
+      display: flex;
+
+      .end {
+        display: flex;
+      }
+    }
+
+    .split-left {
+      flex: 0 0 75%;
+      width: 75%;
+    }
+
+    .split-right {
+      flex: 0 0 25%;
+      width: 25%;
+    }
+
+    [class^="split-"] {
+      > * {
+        margin: .5rem .25rem !important;
+      }
+    }
+  }
+}
+
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+h1 {
+  margin: 0 !important;
+}
+
+
+.statistic {
+  display: flex;
+  flex-direction: column;
+  max-width: 220px;
+  width: 100%;
+  border: 1px solid #cecece;
+  border-radius: .5rem;
+  padding: .5rem;
+  margin: 1rem 0;
+
+  .headline {
+    margin-bottom: .5rem;
+  }
+
+  .stats {
+    display: flex;
+    justify-content: space-between;
+
+    .count {
+      font-size: 1.3rem;
+    }
+
+    .flow {
+      display: flex;
+      align-content: center;
+      align-items: center;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1200px) {
+  .dashboard {
+    .container {
+
+      .split-right, .split-left {
+        width: 100%;
+        flex: 0 0 100%;
+
+        .split-right-bottom, .split-right-top {
+          width: 50%;
+          flex: 0 0 50%;
+        }
+      }
+      .split-right {
+        display: flex;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  .dashboard {
+    > .container {
+      > .split-top {
+        flex-wrap: wrap;
+        .head, .example-spacer {
+          width: 100%;
+          flex: 0 0 100%;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .dashboard {
+    > .container {
+      > .split-top {
+        .statistic {
+          width: 50%;
+          flex: 0 0 50%;
+        }
+      }
+      .split-right {
+        flex-wrap: wrap;
+        .split-right-top,
+        .split-right-bottom {
+          width: 100%;
+          flex: 0 0 100%;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 440px) {
+  .dashboard {
+    > .container {
+      > .split-top {
+        .statistic {
+          width: 100%;
+          flex: 0 0 100%;
+        }
+      }
+    }
+  }
+}
+

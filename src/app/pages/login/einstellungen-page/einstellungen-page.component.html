@@ -1,0 +1,143 @@
+<div class="settings">
+  <div class="container">
+    <h1>Einstellungen</h1>
+    <mat-card>
+      <mat-card-title><h2>Verbindung</h2></mat-card-title>
+      <mat-card-content>
+        <mat-chip-list aria-label="Verbindungs-Status">
+          <mat-chip *ngIf="false">
+            <mat-icon class="material-icons-outlined">check_circle</mat-icon>
+            <span>Verbindung besteht</span>
+          </mat-chip>
+          <mat-chip class="negative">
+            <mat-icon class="material-icons-outlined">error</mat-icon>
+            <span>Keine Verbindung</span>
+          </mat-chip>
+        </mat-chip-list>
+        <p>Verbindung besteht zu <a href="https://www.sewobe.de/lieferdienstsoftware" target="_blank">SEWOBE AG</a>.</p>
+        <p>Letzte Synchronisierung: <b>21.11.2021 19:49 Uhr</b></p>
+        <h3>Zugangs-Daten</h3>
+        <form>
+          <mat-form-field appearance="fill">
+            <mat-label>Webhook-URL</mat-label>
+            <input matInput placeholder="https://..">
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Benutzername</mat-label>
+            <input matInput value="BAECKERBLITZ">
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Enter your password / token</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+        </form>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-stroked-button color="primary">Speichern</button>
+        <button mat-stroked-button color="warn" *ngIf="false">Verbinden trennen</button>
+        <button mat-stroked-button color="accent">Manuel Synchronisieren</button>
+      </mat-card-actions>
+    </mat-card>
+    <mat-card>
+      <mat-card-title><h2>Gecachte Daten</h2></mat-card-title>
+      <mat-card-content>
+        <mat-card-title><h3>Lieferung</h3></mat-card-title>
+        <mat-chip-list aria-label="Einstellungs-Cache">
+          <mat-chip>
+            <mat-icon class="material-icons-outlined">settings</mat-icon>
+            <span>Einstellungen</span>
+          </mat-chip>
+          <mat-chip>
+            <mat-icon class="material-icons-outlined">sell</mat-icon>
+            <span>45 Artikel</span>
+          </mat-chip>
+          <mat-chip>
+            <mat-icon class="material-icons-outlined">add_business</mat-icon>
+            <span>3 Liefergebiete</span>
+          </mat-chip>
+          <mat-chip>
+            <mat-icon class="material-icons-outlined">add_location</mat-icon>
+            <span>8 Postleitzahlen</span>
+          </mat-chip>
+          <mat-chip>
+            <mat-icon class="material-icons-outlined">add_moderator</mat-icon>
+            <span>3 Hook-URLs</span>
+          </mat-chip>
+        </mat-chip-list>
+        <mat-card-title><h3>Bezahlung</h3></mat-card-title>
+        <mat-chip-list aria-label="Bezahlungs-Cache">
+          <mat-chip class="negative">
+            <mat-icon class="material-icons-outlined">error</mat-icon>
+            <span>Überweisung</span>
+          </mat-chip>
+          <mat-chip>
+            <mat-icon class="material-icons-outlined">check_circle</mat-icon>
+            <span>Lastschrift</span>
+          </mat-chip>
+          <mat-chip class="negative">
+            <mat-icon class="material-icons-outlined">error</mat-icon>
+            <span>PayPal</span>
+          </mat-chip>
+          <mat-chip>
+            <mat-icon class="material-icons-outlined">check_circle</mat-icon>
+            <span>PayPal-Subscription</span>
+          </mat-chip>
+        </mat-chip-list>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-stroked-button color="warn">Cache leeren</button>
+      </mat-card-actions>
+    </mat-card>
+    <mat-card>
+      <mat-card-title><h2>Ihre Einstellung</h2></mat-card-title>
+      <mat-card-content>
+        <form>
+          <mat-form-field appearance="fill">
+            <mat-label>Sprache</mat-label>
+            <mat-select value="de">
+              <mat-option value="de">Deutsch</mat-option>
+              <mat-option value="en">Englisch</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <div *ngIf="false">
+            <h3>Abrechnungseinstellungen</h3>
+            <mat-radio-group aria-label="Select an option">
+              <mat-radio-button value="1">Jahresbezahlung</mat-radio-button>
+              <mat-radio-button value="2">Monatsbezahlung</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </form>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-stroked-button color="primary">Speichern</button>
+      </mat-card-actions>
+    </mat-card>
+    <mat-card>
+      <mat-card-title><h2>Profil</h2></mat-card-title>
+      <mat-card-content>
+        <form>
+          <mat-form-field appearance="fill">
+            <mat-label>Bezeichnung</mat-label>
+            <input matInput value="Bäckerblitz.de"  readonly>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Adresse</mat-label>
+            <input matInput value="Mustermann-Str. 9, 86153 Augsburg" readonly>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Beschreibung</mat-label>
+            <textarea matInput></textarea>
+          </mat-form-field>
+        </form>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-stroked-button color="primary">Ändern</button>
+        <button mat-stroked-button color="accent">Synchronisieren</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

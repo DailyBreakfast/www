@@ -1,0 +1,232 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+@use "../../../../theme" as myt;
+
+
+.top-banner {
+  display: grid;
+  width: 100%;
+  background-color: #dedede;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+  height: 180px;
+  @media screen and (max-width: 960px) {
+    h1 {
+      text-align: center;
+    }
+  }
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 15px 0;
+}
+
+
+.groups {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: #f0f0f0;
+
+  .container {
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    padding: 10px 0;
+    overflow-x: auto;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    margin: 0;
+    justify-content: flex-start;
+    padding: 0;
+
+    li {
+      padding: 4px;
+
+      a {
+        text-decoration: none;
+        padding: 6px 8px;
+        display: block;
+        color: #121212;
+        border-radius: 50px;
+
+        &:hover {
+          color: mat.get-color-from-palette(myt.$my-primary, 900) !important;
+        }
+
+        &.active {
+          background-color: mat.get-color-from-palette(myt.$my-primary, 900) !important;
+          color: white;
+
+          &:hover {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  mat-radio-group {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    mat-radio-button {
+      padding: 4px 0;
+    }
+  }
+
+}
+
+
+.spacer-left, .filter-left {
+  flex: 0 0 15%;
+}
+
+.filter-top, .lists {
+  flex: 0 0 85%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filter-top mat-form-field {
+  padding: 0 5px;
+}
+
+.filter-top mat-form-field:first-child {
+  flex: 1 1 auto;
+}
+
+
+.lieferdienst {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  justify-content: flex-start;
+  align-items: stretch;
+  margin: 15px 0;
+  width: 100%;
+  border: 1px solid #ececec;
+  border-radius: 1rem;
+  cursor: pointer;
+  position: relative;
+  transition: all .3s;
+
+  &:hover {
+    border: 1px solid #dedede;
+    background-color: #fbfbfb;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, .06);
+  }
+
+  .brand {
+    width: 150px;
+    height: 150px;
+
+    @media screen and (max-width: 960px) {
+      height: 100px;
+    }
+    position: relative;
+
+    img {
+      position: absolute;
+      height: 75px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .stars {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    bottom: 1px;
+    left: 50%;
+    transform: translateX(-50%) scale(.75);
+
+    mat-icon {
+      color: #eb6a00;
+    }
+  }
+
+  .meta {
+    padding: 15px 15px 0 15px;
+    position: relative;
+
+    > * {
+      padding: 5px 15px;
+      @media screen and (max-width: 960px) {
+        padding: 0px 5px;
+      }
+    }
+  }
+
+
+  .metas {
+    position: absolute;
+    @media screen and (max-width: 960px) {
+      position: relative;
+    }
+    bottom: 15px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+
+    .info {
+      display: flex;
+      align-items: center;
+      align-content: center;
+      flex-wrap: nowrap;
+      padding: 0 5px;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      mat-icon {
+        font-size: 14px;
+        height: 15px;
+        width: 18px;
+      }
+    }
+
+  }
+}
+
+
+.filter-left {
+  position: sticky;
+  top: 64px;
+}

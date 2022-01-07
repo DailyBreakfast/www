@@ -1,0 +1,188 @@
+<div class="top-banner">
+  <h1>Bestelle in einem von 3.023 Lieferdiensten deutschlandweit</h1>
+</div>
+<div class="groups">
+  <div class="container" fxFlex="70vw" fxFlex.lt-md="95%">
+    <ul>
+      <li>
+        <button mat-raised-button color="primary">Alles</button>
+      </li>
+      <li>
+        <button mat-button>Brötchen</button>
+      </li>
+      <li>
+        <button mat-button>Belegte Brötchen</button>
+      </li>
+      <li>
+        <button mat-button>Laugenprodukte & Stangen</button>
+      </li>
+      <li>
+        <button mat-button>Croissants & Mehr</button>
+      </li>
+      <li>
+        <button mat-button>Baquette & Mehr</button>
+      </li>
+      <li>
+        <button mat-button>Brote</button>
+      </li>
+    </ul>
+  </div>
+</div>
+<div>
+  <div class="container" fxLayout="" fxFlex="70vw" fxFlex.lt-md="95%">
+    <div class="spacer-left" fxFlex="200px" fxHide.lt-md=""></div>
+    <div class="filter-top" fxFlex="calc(100% - 200px)" fxFlex.lt-md="100%" fxLayout="">
+      <mat-form-field appearance="fill" fxFlex="40%" fxHide.lt-sm="">
+        <mat-label>Suche</mat-label>
+        <input matInput placeholder="Nach Lieferdiensten suchen">
+      </mat-form-field>
+      <mat-form-field appearance="fill" fxFlex="20%" fxFlex.lt-sm="50%">
+        <mat-label>Postleitzahl</mat-label>
+        <input matInput placeholder="Nach PLZ suchen">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" fxFlex="20%" fxHide.lt-sm="">
+        <mat-label>Sortierung</mat-label>
+        <mat-select>
+          <mat-option value="1">
+            Empfehlung
+          </mat-option>
+          <mat-option value="2">
+            Bewertungen
+          </mat-option>
+          <mat-option value="4">
+            Beliebtheit
+          </mat-option>
+          <mat-option value="5">
+            Lieferkosten
+          </mat-option>
+          <mat-option value="6">
+            Mindestbestellwert
+          </mat-option>
+          <mat-option value="7">
+            Alphabetisch
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" fxFlex="20%" fxFlex.lt-sm="50%">
+        <mat-label>Lieferdatum</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+    </div>
+    <div class="filter-left" fxFlex="200px" fxHide.lt-sm="" fxLayout="column">
+      <div class="filter-group">
+        <b mat-subheader>Mindestbestellwert</b>
+        <mat-radio-group
+          aria-labelledby="example-radio-group-label"
+          class="example-radio-group">
+          <mat-radio-button class="example-radio-button" value="0" checked>Keine Präferenz</mat-radio-button>
+          <mat-radio-button class="example-radio-button" value="1">10,00 € oder weniger</mat-radio-button>
+          <mat-radio-button class="example-radio-button" value="2">15,00 € oder weniger</mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <div class="filter-group">
+        <b mat-subheader>Lieferkosten</b>
+        <mat-radio-group
+          aria-labelledby="example-radio-group-label"
+          class="example-radio-group">
+          <mat-radio-button class="example-radio-button" value="0" checked>Keine Präferenz</mat-radio-button>
+          <mat-radio-button class="example-radio-button" value="1">Gratis</mat-radio-button>
+          <mat-radio-button class="example-radio-button" value="2">1,00 € oder weniger</mat-radio-button>
+          <mat-radio-button class="example-radio-button" value="3">2,50 € oder weniger</mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <div class="filter-group">
+        <b mat-subheader>Aktionen und Rabatte</b>
+        <mat-slide-toggle>Rabatt</mat-slide-toggle>
+        <mat-slide-toggle>Einmalige Bestellung</mat-slide-toggle>
+      </div>
+    </div>
+    <div class="lists" fxFlex="calc(100% - 200px)" fxLayout="column">
+      <ng-container *ngIf="lieferdienste.length > 0">
+        <div class="lieferdienst" *ngFor="let item of lieferdienste" routerLink="artikel" fxLayout="" fxLayout.lt-sm="row wrap">
+          <div class="brand" fxFlex="150px" fxFlex.lt-sm="100%">
+            <figure><img src="assets/demo/yourbrand.png" alt="">
+            </figure>
+            <div class="stars" >
+              <div class="star">
+                <mat-icon>star</mat-icon>
+              </div>
+              <div class="star">
+                <mat-icon>star</mat-icon>
+              </div>
+              <div class="star">
+                <mat-icon>star</mat-icon>
+              </div>
+              <div class="star">
+                <mat-icon>star</mat-icon>
+              </div>
+              <div class="star">
+                <mat-icon>star</mat-icon>
+              </div>
+              (512)
+            </div>
+          </div>
+          <div class="meta">
+            <h2>Brandname</h2>
+            <p>Eine sehr lange beschreibung beschränkt auf X Zeichen</p>
+            <div class="metas">
+              <span class="info"><mat-icon>update</mat-icon> <span>Bis 17:00</span></span>
+              <span class="info"><mat-icon>local_shipping</mat-icon> <span>Gratis</span></span>
+              <span class="info"><mat-icon>shopping_cart</mat-icon> <span>Min. 5 €</span></span>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="!lieferdienste || lieferdienste.length === 0">
+        <div fxLayout="column" fxLayoutAlign="center center">
+          <h2>Ohh nein, wir haben leider keinen passenden Lieferdienst für die gefunden.</h2>
+          <p>Leider konntne wir keinen passendenn Lieferdienst bei Ihnen finden, lassen Sie uns doch anders helfen</p>
+        </div>
+        <div fxLayout="">
+          <div fxFlex="50%">
+            <mat-card>
+              <mat-card-title>
+                Lass dich informieren
+              </mat-card-title>
+              <mat-card-content fxLayout="column">
+                <p fxFlexFill>Lass dich von uns informieren, sobald ein Lieferdienst in deiner Umgebung aufgemacht
+                  hat.</p>
+                <mat-form-field appearance="fill" fxFlexFill>
+                  <mat-label>E-Mail-Adresse</mat-label>
+                  <input matInput type="email" required>
+                </mat-form-field>
+                <mat-form-field appearance="fill" fxFlexFill>
+                  <mat-label>Postleitzahl</mat-label>
+                  <input matInput required>
+                </mat-form-field>
+                <mat-checkbox fxFlexFill>Datenschutz</mat-checkbox>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-flat-button color="accent">Absenden</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+          <div fxFlex="15px"></div>
+          <div fxFlex="50%">
+            <mat-card>
+              <mat-card-title>
+                Mache deinen eigenen Lieferdienst auf!
+              </mat-card-title>
+              <mat-card-content>
+                Mache deinen eigenen Lieferdienst auf. Mit einem unserer Partner kannst du dir einfach eine
+                Lieferdienst-Software holen und direkt loslegen!
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-flat-button color="primary" routerLink="lieferdienst-werden">Mehr Infos</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

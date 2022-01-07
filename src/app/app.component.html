@@ -1,0 +1,50 @@
+<mat-drawer-container class="example-container" autosize>
+
+  <mat-toolbar color="primary" role="navigation">
+    <a type="button" mat-button routerLink="./">
+      <mat-icon class="material-icons-outlined">circle</mat-icon>
+      <b>DailyBreakfast</b>.de</a>
+    <div fxHide.lt-md="">
+      <a type="button" mat-button routerLink="login/dashboard" routerLinkActive="active">
+        Dashboard
+      </a>
+      <a type="button" mat-button routerLink="login/einstellungen" routerLinkActive="active">
+        Einstellungen
+      </a></div>
+    <span class="example-spacer"></span>
+    <button type="button" mat-icon-button routerLink="lieferservice/bezahlen" matBadge="1" matBadgeColor="warn"
+            matBadgeHidden="true" aria-label="Jetzt in den Warenkorb">
+      <mat-icon>shopping_basket</mat-icon>
+    </button>
+    <button type="button" mat-icon-button [matMenuTriggerFor]="afterMenu">
+      <mat-icon aria-hidden="false" aria-label="Hauptmenü zur navigation auf DailyBreakfast">menu</mat-icon>
+    </button>
+    <mat-menu #afterMenu="matMenu" xPosition="after">
+      <mat-nav-list fxHide.gt-sm="" fxShow.lt-md="">
+        <div mat-subheader>Ihr Zugang</div>
+        <mat-list-item  routerLink="login/dashboard">
+            Dashboard
+        </mat-list-item>
+        <mat-list-item  routerLink="login/einstellungen">
+            Einstellungen
+        </mat-list-item>
+
+      </mat-nav-list>
+
+      <mat-nav-list *ngFor="let nav of navigation; let last = last">
+        <div mat-subheader>{{ nav.object }}</div>
+        <mat-list-item *ngFor="let item of nav.childs" [routerLink]="item.path" [routerLinkActive]="'active'">
+          {{ item.subject }}
+        </mat-list-item>
+        <mat-list-item *ngIf="nav.action">
+          <button mat-flat-button *ngIf="nav.action" [color]="nav.action.color" [routerLink]="nav.action.path"
+                  style="width: 100%;">{{ nav.action.subject }}</button>
+        </mat-list-item>
+        <mat-divider *ngIf="!last"></mat-divider>
+      </mat-nav-list>
+    </mat-menu>
+  </mat-toolbar>
+  <div class="example-sidenav-content" role="main">
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>

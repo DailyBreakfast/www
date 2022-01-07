@@ -1,0 +1,173 @@
+<div class="hero" fxLayout="row wrap" fxLayoutAlign="center center">
+  <img src="assets/demo/hero.jpg" width="1920" alt="Headerbild bitte noch austauschen"/>
+  <div fxFlex="35vw" fxLayout="row wrap" class="hero-content" fxFlex.lt-md="95vw">
+    <h1 fxFlex="100%">Jeden morgen frisch<br/><small>Finde jetzt einen Lieferdienst in deiner Umgebung</small></h1>
+    <div fxFlex="100%" fxLayout="" fxLayoutAlign="center start">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Adresse, z.B. Bahnhofstraße 1">
+        <mat-icon matPrefix>place</mat-icon>
+      </mat-form-field>
+      <button mat-raised-button color="accent" routerLink="lieferservice" data-cyid="searchbutton">Anzeigen</button>
+    </div>
+  </div>
+</div>
+<section fxLayout="" fxLayoutAlign="center center" class="reader-element">
+  <div fxFlex="1000px" fxFlex.lt-md="90%">
+    <h2>In drei einfachen Schritten zu einem leckeren Frühstück<br/>
+      <b>Bestellen und genießen!</b></h2>
+    <div fxLayout="" fxLayoutAlign="center start" fxLayout.lt-md="column">
+      <div fxLayout="column" fxFlex="calc(100% / 3 - 60px)" class="reader">
+        <div class="image">
+          <img src="assets/demo/platzhalter_16-9.png" alt="Ein Demobild. Bitte noch austauschen"/>
+        </div>
+        <div class="content">
+          <h3>Gib Deinen Standort an</h3>
+          <p>Gib deine Adresse ein oder lasse uns deine Position bestimmen.</p>
+        </div>
+      </div>
+      <div class="spacer" fxFlex="30px" fxFlex.lt-md="100%" fxLayout="" fxLayoutAlign="center center">
+        <mat-icon fxHide.lt-md="">arrow_forward_ios</mat-icon>
+        <mat-icon fxHide.gt-sm="">keyboard_arrow_down</mat-icon>
+      </div>
+      <div fxLayout="column" fxFlex="calc(100% / 3 - 60px)" class="reader">
+        <div class="image">
+          <img src="assets/demo/platzhalter_16-9.png" alt="Ein Demobild. Bitte noch austauschen"/>
+        </div>
+        <div class="content">
+          <h3>Lieferdienst und Produkte auf DailyBreakfast.de auswählen</h3>
+          <p>Was trifft Deinen Geschmack? Klicke Dich durch
+            zahlreiche Lieferdienste und Bewertungen.</p>
+        </div>
+      </div>
+      <div class="spacer" fxFlex="30px" fxFlex.lt-md="100%"  fxLayout="" fxLayoutAlign="center center">
+        <mat-icon fxHide.lt-md="">arrow_forward_ios</mat-icon>
+        <mat-icon fxHide.gt-sm="">keyboard_arrow_down</mat-icon>
+      </div>
+      <div fxLayout="column" fxFlex="calc(100% / 3 - 60px)" class="reader">
+        <div class="image">
+          <img src="assets/demo/platzhalter_16-9.png" alt="Ein Demobild. Bitte noch austauschen"/>
+        </div>
+        <div class="content">
+          <h3>Bestellen und liefern lassen</h3>
+          <p>Bestelle sofort und erhalte zum gewünschten Termin die Bestellung. Lasse dich gleich Regelmäßig beliefern
+            und mache dir nie wieder Gedanken, wer zum Bäcker geht.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section fxLayout="" fxLayoutAlign="center center" class="leistung-element">
+  <div fxFlex="1000px" fxFlex.lt-md="90%">
+    <h2>DailyBreakfast.de<br/>
+      <b>Knusprige Backwaren ohne am Bäcker anzustehen.</b></h2>
+    <section fxFlexFill fxHide.lt-md=""></section>
+    <div fxLayout="" fxLayout.lt-md="column" fxLayoutAlign="space-between start">
+      <div fxFlex="calc(100% / 3 - 60px)" fxFlex.lt-md="100%">
+        <mat-card>
+          <mat-card-header fxLayout="" fxLayoutAlign="center center">
+            <div class="card-icon" fxLayout="" fxLayoutAlign="center center">
+              <mat-icon class="material-icons-outlined">timer</mat-icon>
+            </div>
+            <mat-card-title><h3>Wir sparen deine Zeit!</h3></mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <mat-list fxFlex="100%">
+              <mat-list-item>
+                <mat-icon mat-list-icon color="primary">done</mat-icon>
+                <p>Kein lästiges Warten beim Bäcker</p>
+              </mat-list-item>
+              <mat-list-item>
+                <mat-icon mat-list-icon color="primary">done</mat-icon>
+                <p>Kein Umentscheiden wenn ein Produkt nicht verfügbar ist</p>
+              </mat-list-item>
+              <mat-list-item>
+                <mat-icon mat-list-icon color="primary">done</mat-icon>
+                <p>Du brauchst nicht mehr zum Bäcker fahren, er fährt jetzt zu dir</p>
+              </mat-list-item>
+            </mat-list>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <div class="spacer" fxFlex="15px" fxLayout="" fxLayoutAlign="center center">
+      </div>
+      <div fxFlex="calc(100% / 3 - 60px)" fxFlex.lt-md="100%">
+        <mat-card>
+          <mat-card-header fxLayout="" fxLayoutAlign="center center">
+            <div class="card-icon" fxLayout="" fxLayoutAlign="center center">
+              <mat-icon class="material-icons-outlined">add_task</mat-icon>
+            </div>
+            <mat-card-title><h3>Tolle Produktauswahl</h3></mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <mat-list fxFlex="100%">
+              <mat-list-item>
+                <mat-icon mat-list-icon color="primary">done</mat-icon>
+                <p>Viele Lieferdienste liefern tolle Brötchen & Co.</p>
+              </mat-list-item>
+              <mat-list-item>
+                <mat-icon mat-list-icon color="primary">done</mat-icon>
+                <p>Egal wo du bist, lass dich einfach beliefern.</p>
+              </mat-list-item>
+            </mat-list>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <div class="spacer" fxFlex="15px" fxLayout="" fxLayoutAlign="center center">
+      </div>
+
+      <div fxFlex="calc(100% / 3 - 60px)" fxFlex.lt-md="100%">
+        <mat-card>
+          <mat-card-header fxLayout="" fxLayoutAlign="center center">
+            <div class="card-icon" fxLayout="" fxLayoutAlign="center center">
+              <mat-icon class="material-icons-outlined">verified</mat-icon>
+            </div>
+            <mat-card-title><h3>Deine Vorteile</h3></mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <mat-list fxFlex="100%">
+              <mat-list-item>
+                <mat-icon mat-list-icon color="primary">done</mat-icon>
+                <p>Gemütlich ausschlafen und Bestellung einfach vor der Tür finden</p>
+              </mat-list-item>
+              <mat-list-item>
+                <mat-icon mat-list-icon color="primary">done</mat-icon>
+                <p>Bezahlen ohne Bargeld einfach und schnell.</p>
+              </mat-list-item>
+              <mat-list-item>
+                <mat-icon mat-list-icon color="primary">done</mat-icon>
+                <p>Bestelle einfach ein paar Tage vorher</p>
+              </mat-list-item>
+            </mat-list>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section fxLayout="" fxLayoutAlign="center center" class="delivery-elements">
+  <div fxFlex="1000px" fxFlex.lt-md="90%">
+    <h2>Du kannst auch sehr einfach selbst los legen!<br/><b>Werde ein eigener Lieferdienst</b></h2>
+    <button mat-raised-button color="primary" routerLink="lieferdienst-werden" data-cyid="start">Jetzt starten</button>
+  </div>
+</section>
+<div class="footer" role="menu">
+  <section fxLayout="" fxLayoutAlign="center center">
+    <div fxFlex="1000px" fxFlex.lt-md="90%" fxLayout="" fxLayout.lt-md="column" fxLayoutAlign="space-between start">
+      <div fxFlex="calc(100% / 3 - 60px)" fxFlex.lt-sm="100%" role="group">
+        <h3>Über uns</h3>
+        <div class="brand" routerLink="./" role="menuitem">
+          <mat-icon class="material-icons-outlined">circle</mat-icon>
+          <b>DailyBreakfast</b>.de</div>
+      </div>
+      <div fxFlex="calc(100% / 3 - 60px)" fxFlex.lt-sm="100%" *ngFor="let nav of navigation" role="group">
+        <h3>{{ nav.object }}</h3>
+          <p class="footer-nav-item" *ngFor="let item of nav.childs" [routerLink]="item.path" [routerLinkActive]="'active'" role="menuitem">
+            {{ item.subject }}
+          </p>
+      </div>
+    </div>
+  </section>
+</div>

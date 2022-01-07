@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Fira Sans', "Helvetica Neue", sans-serif; }
+
+
+.mat-button.active {
+  background: rgba(0,0,0,.2);
+}
+
+.container {
+  h1, h2, h3, h4, h5, h6 {
+    flex: 0 0 100%;
+  }
+}

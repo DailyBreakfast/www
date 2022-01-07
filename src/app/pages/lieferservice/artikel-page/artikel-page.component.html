@@ -1,0 +1,182 @@
+<div class="artikel" fxLayout="" fxLayoutAlign="stretch" fxLayout.lt-sm="column" fxLayoutAlign.lt-sm="">
+  <div fxFlex="calc(100% - 18vw)" fxFlex.lt-md="calc(100% - 30vw)" fxFlex.lt-sm="100%" fxLayout="column">
+    <div class="top-banner">
+
+    </div>
+    <div class="company">
+      <div class="container" fxFlex="70vw" fxFlex.lt-md="95%" fxLayout="" fxLayoutAlign="start start">
+        <div fxFlex="none">
+          <h1>Brandname</h1>
+          <div class="stars" fxLayout="" fxLayoutAlign="start center">
+            <div class="star" fxHide.lt-sm="">
+              <mat-icon>star</mat-icon>
+            </div>
+            <div class="star" fxHide.lt-sm="">
+              <mat-icon>star</mat-icon>
+            </div>
+            <div class="star" fxHide.lt-sm="">
+              <mat-icon>star</mat-icon>
+            </div>
+            <div class="star" fxHide.lt-sm="">
+              <mat-icon>star</mat-icon>
+            </div>
+            <div class="star" fxHide.lt-sm="">
+              <mat-icon>star</mat-icon>
+            </div>
+            (512 Bewertungen)
+          </div>
+        </div>
+        <div fxFlex="auto"></div>
+        <div class="logo">
+          <figure><img src="assets/demo/yourbrand.png" alt="">
+          </figure>
+        </div>
+        <div fxFlex="auto"></div>
+        <div class="more" fxFlex="none">
+          <button mat-stroked-button aria-label="Mehr Infos">
+            <mat-icon class="material-icons-outlined">info</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="groups">
+      <div class="container" fxFlex="70vw" fxFlex.lt-md="95%">
+        <ul>
+          <li>
+            <button mat-raised-button color="primary">Alles</button>
+          </li>
+          <li>
+            <button mat-button>Börtchen</button>
+          </li>
+          <li>
+            <button mat-button>Belegte Brötchen</button>
+          </li>
+          <li>
+            <button mat-button>Laugenprodukte & Stangen</button>
+          </li>
+          <li>
+            <button mat-button>Croissants & Mehr</button>
+          </li>
+          <li>
+            <button mat-button>Baquette & Mehr</button>
+          </li>
+          <li>
+            <button mat-button>Brote</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="artikel-groups">
+      <div class="container" fxLayout="column" fxFlex="100%" fxFlex.lt-md="95%">
+        <db-artikel *ngFor="let item of lieferdienste" fxLayout="row wrap"></db-artikel>
+      </div>
+    </div>
+    <div>
+      <div class="container" fxFlex="100%" fxFlex.lt-md="95%">
+        <h4><b>Impressum</b></h4>
+        <p>Brandname<br>
+          Musterstraße 999<br>
+          01234 Musterhause
+          Gesetzlicher Vertreter: <span>Max Mustermensch</span>
+        </p>
+        <p><a href="mailto:info@dailybreakfast.de" target="_blank">info@dailybreakfast.de</a></p>
+        <p>Unternehmensregister: <span>Musterhause</span><br/>
+          Unternehmensregister-Nr.: <span>0123456789</span></p>
+        <p>MwSt-Nummer: DE0123456789</p>
+        <p>Plattform der EU-Kommission zur Online-Streitbeilegung: <a href="https://ec.europa.eu/consumers/odr"
+                                                                      target="_blank">https://ec.europa.eu/consumers/odr</a>
+        </p>
+      </div>
+    </div>
+
+
+  </div>
+  <div fxFlex="18vw" class="split-right" fxFlex.lt-md="30vw" fxFlex.lt-sm="100%">
+    <h2>Warenkorb</h2>
+    <div class="warenkorb">
+      <div class="artikel-liste">
+        <ng-container *ngIf="filled">
+          <div class="item" fxLayoutAlign="space-between center">
+            <div>
+              <span class="menge">1x</span>
+              <span class="name">Genetzes Brot</span>
+              <ng-container *ngIf="single">
+                <div class="button-group">
+                  <button mat-icon-button mat-stroked-button aria-label="Menge reduzieren">
+                    <mat-icon>remove</mat-icon>
+                  </button>
+                  <button mat-icon-button mat-stroked-button aria-label="Menge erhöhen">
+                    <mat-icon>add</mat-icon>
+                  </button>
+                </div>
+              </ng-container>
+              <ng-container *ngIf="!single">
+                <button mat-icon-button color="accent" class="edit" aria-label="Menge bearbeiten">
+                  <mat-icon>edit</mat-icon>
+                </button>
+              </ng-container>
+            </div>
+            <div>
+              <span class="betrag"><span>2,00</span> €</span>
+              <button mat-icon-button color="accent" class="remove" aria-label="Artikel entfernen">
+                <mat-icon class="material-icons-outlined">delete</mat-icon>
+              </button>
+            </div>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="!filled">
+          <div class="no-article">
+            <mat-icon>shopping_bag</mat-icon>
+            <span>Wähle leckere Artikel aus & bestelle zu deinem gewünschten Termin.</span>
+          </div>
+        </ng-container>
+      </div>
+      <div class="summary">
+        <div>
+          <span>Zwischensumme</span>
+          <span class="betrag"><span>0,00</span> €</span>
+        </div>
+        <ng-container *ngIf="!filled">
+          <div>
+            <span>Liefergebühren</span>
+            <span class="betrag"><span>0,00</span> €</span>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="!filled">
+          <div>
+            <span>Rabatt</span>
+            <span class="betrag"><span>0,00</span> €</span>
+          </div>
+        </ng-container>
+        <div>
+          <b>Gesamt</b>
+          <b class="betrag"><span>0,00</span> €</b>
+        </div>
+        <ng-container *ngIf="filled">
+          <div class="mindest">
+            <span>Benötigter Betrag, um den Mindestbestellwert zu erreichen</span>
+            <span class="betrag"><span>0,00</span> €</span>
+          </div>
+        </ng-container>
+      </div>
+      <ng-container *ngIf="!filled">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Rabattcode</mat-label>
+          <input matInput>
+        </mat-form-field>
+      </ng-container>
+      <div class="final">
+        <ng-container *ngIf="!filled">
+          <small>Leider kannst Du noch nicht bestellen. <span>Brandname</span> liefert erst ab einem <b>Mindestbestellwert
+            von <span>10,00</span> €</b> (exkl. Lieferkosten)</small>
+        </ng-container>
+        <ng-container *ngIf="filled">
+          <small>Du hast den <b>Mindestbestellwert von <span>10,00</span> €</b> erreicht und kannst jetzt
+            fortfahren.</small>
+        </ng-container>
+        <button mat-flat-button color="accent" [disabled]="!filled">Bestellen</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,172 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+@use "../../../theme" as myt;
+
+:host {
+  margin: 15px 0;
+  width: 100%;
+  border: 1px solid #ececec;
+  border-radius: 1rem;
+  cursor: pointer;
+  position: relative;
+  transition: all .3s;
+
+  &:hover,
+  &:not(.close){
+    border: 1px solid #dedede;
+    background-color: #fbfbfb;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, .06);
+  }
+
+  .more-details {
+    transform: scaleY(0);
+    height: 0 !important;
+    overflow: hidden;
+    transition: transform 0.4s;
+  }
+
+  &:not(.close) {
+    .more-details {transition: transform 0.4s;
+      transform-origin: top;
+      transform: scaleY(1);
+      height: auto !important;
+    }
+
+    &:hover {
+      box-shadow: 0 6px 16px rgba(0, 0, 0, .12);
+    }
+  }
+
+
+  .product {
+    width: 150px;
+    height: 150px;
+    @media screen and (max-width: 960px) {
+      width: 80px;
+    }
+    position: relative;
+    overflow: hidden;
+
+    figure {
+      aspect-ratio: 1;
+      overflow: hidden;
+      margin: 35px;
+
+      @media screen and (max-width: 960px) {
+        margin: 10px;
+      }
+      border-radius: 1rem;
+
+      img {
+        height: auto;
+        max-width: 100%;
+        width: auto;
+      }
+    }
+  }
+
+  .stars {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    bottom: 1px;
+    left: 50%;
+    transform: translateX(-50%) scale(.75);
+
+    mat-icon {
+      color: orange;
+    }
+  }
+
+  .meta {
+    padding: 15px 15px 0 15px;
+    position: relative;
+    width: 100%;
+
+    > * {
+      padding: 5px 15px;
+
+      @media screen and (max-width: 960px) {
+        padding: 5px;
+      }
+    }
+
+  }
+  .top {
+    .add {
+      position: absolute;
+      right: 0;
+      top: 0;
+      border: 1px solid #ececec;
+      padding: 5px !important;
+      border-top-right-radius: 1rem;
+
+      mat-icon {
+        transform: rotate(0deg);
+        transition: transform .4s;
+      }
+    }
+  }
+  &:not(.close) {
+    .top {
+      .add {
+        .mat-icon {
+          transform: rotate(45deg);
+          transition: transform .4s;
+        }
+      }
+    }
+  }
+
+  .metas {
+    position: absolute;
+    @media screen and (max-width: 960px) {
+      position: relative;
+    }
+    bottom: 15px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+
+    .betrag {
+      font-size: 1.3rem;
+      color: mat.get-color-from-palette(myt.$my-primary, 800) !important;
+    }
+
+    .info {
+      display: flex;
+      align-items: center;
+      align-content: center;
+      flex-wrap: nowrap;
+
+      mat-icon {
+        font-size: 14px;
+        height: 15px;
+        width: 18px;
+      }
+    }
+  }
+
+  .more {
+    border-top: 1px solid #ececec;
+    padding: 0 15px;
+
+    .add {
+      position: relative;
+      border: none;
+      output {
+        height: 100%;
+        border: 1px solid #ececec;
+        border-radius: .6rem;
+        padding: 6px;
+        width: 40px;
+        display: inline-block;
+        text-align: right;
+      }
+    }
+
+  }
+}

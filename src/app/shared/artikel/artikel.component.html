@@ -1,0 +1,56 @@
+<div fxFlex="100%"  fxLayout="" fxLayout.lt-sm="row wrap" (click)="close = !close" class="top">
+  <div class="product"  fxFlex="150px" fxFlex.lt-md="80px">
+    <figure>
+      <img src="assets/demo/brot.jpg" alt="">
+    </figure>
+  </div>
+  <div class="meta" fxFlex="calc(100% - 150px)" fxFlex.lt-md="calc(100% - 80px)">
+    <h2>Produktname</h2>
+    <ng-container>
+      <p>Eine sehr lange beschreibung beschränkt auf X Zeichen</p>
+    </ng-container>
+
+    <div class="metas">
+      <b class="info betrag"><span>1,15</span> €</b>
+    </div>
+    <div class="add">
+      <button mat-icon-button color="accent" aria-label="Öffnen und Bestellen">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
+<div fxFlexFill fxLayout="row wrap" class="more-details">
+  <div fxFlex="calc(100% / 3)" fxFlex.lt-sm="100%" fxFlex.lt-md="50%" class="more">
+    <h3><b>Beschreibung</b></h3>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+      dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+      kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+      sadipscing elitr, sed diam</p>
+  </div>
+  <div fxFlex="calc(100% / 3)" fxFlex.lt-sm="100%" fxFlex.lt-md="50%" class="more">
+    <h3><b>Nährwerte</b></h3>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+      dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+      kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+      sadipscing elitr, sed diam</p>
+  </div>
+  <div fxFlex="calc(100% / 3)" fxFlex.lt-md="100%" class="more">
+    <h3><b>Bestellen</b></h3>
+    <mat-list>
+      <mat-list-item fxLayout="" fxLayoutAlign="flex-end center" *ngFor="let day of days">
+        <div>{{ day.label }}</div>
+        <div class="add">
+          <input type="hidden">
+          <button mat-icon-button color="accent" aria-label="Menge verringern">
+            <mat-icon>remove_circle_outline</mat-icon>
+          </button>
+          <output>0</output>
+          <button mat-icon-button color="accent" aria-label="Menge erhöhen">
+            <mat-icon>add_circle_outline</mat-icon>
+          </button>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </div>
+</div>

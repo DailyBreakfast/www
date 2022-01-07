@@ -1,0 +1,46 @@
+@use '@angular/material' as mat;
+@use 'assets/colors' as colors;
+
+@include mat.core();
+
+$my-primary: mat.define-palette(colors.$mat-primary, 800);
+$my-accent: mat.define-palette(colors.$mat-accent, 800);
+$my-warn: mat.define-palette(colors.$mat-warning, 500);
+$my-danger: mat.define-palette(colors.$mat-danger, 900);
+$my-triadic: mat.define-palette(colors.$mat-triadic, 300);
+
+$my-theme: mat.define-light-theme((
+  color: (
+    primary: $my-primary,
+    accent: $my-accent,
+    warn: $my-danger,
+  )
+));
+@include mat.all-component-themes($my-theme);
+
+@include mat.strong-focus-indicators-theme($my-theme);
+
+
+
+.mat-chip-list {
+  display: block;
+  margin-bottom: 1rem !important;
+
+  mat-chip {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+
+    &:not([color]),
+    &.positive:not([color]) {
+      background-color: mat.get-color-from-palette($my-triadic, 50) !important;
+      color: mat.get-color-from-palette($my-triadic, 50-contrast) !important;
+    }
+
+    &.negative:not([color]) {
+      background-color: mat.get-color-from-palette($my-danger, 50) !important;
+      color: mat.get-color-from-palette($my-danger, 50-contrast) !important;
+    }
+  }
+}

@@ -1,0 +1,109 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+@use "../../../../theme" as myt;
+
+.split {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: stretch;
+
+  [class^="split-"] {
+    flex: 0 0 50%;
+    width: 50%;
+
+    > * {
+      padding: 5rem;
+    }
+  }
+
+  .split-right {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: calc(100vh - 64px);
+    flex-wrap: nowrap;
+  }
+
+  .split-left {
+    background-color: mat.get-color-from-palette(myt.$my-accent, 50);
+  }
+
+  .form {
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+
+    button {
+      width: 100%;
+      margin-bottom: 1rem !important;
+      line-height: 44px !important;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+    }
+  }
+}
+
+
+.divider {
+  position: relative;
+  margin-bottom: 5rem;
+  margin-top: 4rem;
+
+  span {
+    padding: .5rem .8rem;
+    background-color: #fafafa;
+    z-index: 1;
+    position: relative;
+    display: inline-block;
+    max-width: 80%;
+  }
+
+  &:after {
+    content: " ";
+    border-bottom: 1px solid #d3d3d3;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 0;
+    top: 50%;
+    height: 0;
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+
+  .split {
+    .split-left {
+      display: none;
+    }
+    [class^="split-"] {
+      flex: 0 0 100%;
+      width: 100%;
+
+      > * {
+        padding: 5rem;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 450px) {
+
+  .split {
+    [class^="split-"] {
+      > * {
+        padding: 2rem;
+      }
+    }
+  }
+}

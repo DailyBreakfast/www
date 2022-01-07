@@ -1,0 +1,137 @@
+<div class="dashboard">
+  <div class="container">
+    <div class="split-top">
+      <div class="head">
+        <h1>👋 Hallo <span>Max</span></h1>
+        <span>Von <span>Bäckerblitz.de</span></span>
+      </div>
+      <div class="example-spacer"></div>
+    </div>
+    <div class="split-left">
+      <mat-card>
+        <mat-card-title><h2>Verkäufe</h2></mat-card-title>
+        <mat-card-content>
+          <div fxLayout="" fxLayoutAlign="space-between center" fxLayout.lt-sm="column">
+            <mat-chip-list aria-label="Statistiken">
+              <mat-chip>
+                <mat-icon class="material-icons-outlined">trending_up</mat-icon>
+                <span>485 Verkäufe</span>
+              </mat-chip>
+              <mat-chip class="negative">
+                <mat-icon class="material-icons-outlined">trending_down</mat-icon>
+                <span>498 Aufrufe</span>
+              </mat-chip>
+            </mat-chip-list>
+            <div>
+              <mat-form-field appearance="fill" fxFlex.lt-md="100%">
+                <mat-label>Zeitraum</mat-label>
+                <mat-select [(value)]="selected">
+                  <mat-option *ngFor="let option of filter" [value]="option.value">
+                    {{option.viewValue}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+        </mat-card-content>
+        <mat-card-content [style.height.px]="300">
+          <ngx-charts-line-chart
+            [legend]="false"
+            [showXAxisLabel]="false"
+            [showYAxisLabel]="false"
+            [xAxis]="true"
+            [yAxis]="true"
+            [gradient]="true"
+            [results]="multi">
+          </ngx-charts-line-chart>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="split-right">
+      <div class="split-right-top">
+        <mat-card>
+          <mat-card-title><h2>Lieferdienst-Software</h2></mat-card-title>
+          <mat-card-content>
+            <mat-chip-list aria-label="Verbindungs-Status">
+              <mat-chip>
+                <mat-icon class="material-icons-outlined">check_circle</mat-icon>
+                <span>Verbindung besteht</span>
+              </mat-chip>
+              <mat-chip class="negative" *ngIf="false">
+                <mat-icon class="material-icons-outlined">error</mat-icon>
+                <span>Keine Verbindung</span>
+              </mat-chip>
+            </mat-chip-list>
+            <h3><b>Abgeholte Daten</b></h3>
+
+            <mat-card-title><h4>Lieferung</h4></mat-card-title>
+            <mat-chip-list aria-label="Lieferdienst-Caching">
+              <mat-chip>
+                <mat-icon class="material-icons-outlined">settings</mat-icon>
+                <span>Einstellungen</span>
+              </mat-chip>
+              <mat-chip>
+                <mat-icon class="material-icons-outlined">sell</mat-icon>
+                <span>45 Artikel</span>
+              </mat-chip>
+              <mat-chip>
+                <mat-icon class="material-icons-outlined">add_business</mat-icon>
+                <span>3 Liefergebiete</span>
+              </mat-chip>
+              <mat-chip>
+                <mat-icon class="material-icons-outlined">add_location</mat-icon>
+                <span>8 Postleitzahlen</span>
+              </mat-chip>
+              <mat-chip>
+                <mat-icon class="material-icons-outlined">add_moderator</mat-icon>
+                <span>3 Hook-URLs</span>
+              </mat-chip>
+            </mat-chip-list>
+            <mat-card-title *ngIf="false"><h4>Bezahlung</h4></mat-card-title>
+            <mat-chip-list *ngIf="false" aria-label="Bezahlungs-Caching">
+              <mat-chip class="negative">
+                <mat-icon class="material-icons-outlined">error</mat-icon>
+                <span>Überweisung</span>
+              </mat-chip>
+              <mat-chip>
+                <mat-icon class="material-icons-outlined">check_circle</mat-icon>
+                <span>Lastschrift</span>
+              </mat-chip>
+              <mat-chip class="negative">
+                <mat-icon class="material-icons-outlined">error</mat-icon>
+                <span>PayPal</span>
+              </mat-chip>
+              <mat-chip>
+                <mat-icon class="material-icons-outlined">check_circle</mat-icon>
+                <span>PayPal-Subscription</span>
+              </mat-chip>
+            </mat-chip-list>
+          </mat-card-content>
+          <mat-card-actions>
+            <a mat-stroked-button color="accent" routerLink="../einstellungen">Verbindung ändern</a>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+      <div class="split-right-bottom" *ngIf="false">
+        <mat-card>
+          <mat-card-title><h2>Aktueller Plan: <span *ngIf="true"><b>Free</b>🌱</span><span *ngIf="false"><b>Premium</b>🚀</span>
+          </h2>
+          </mat-card-title>
+          <mat-card-content>
+            <p>Jetzt zu <b>Premium</b> upgraden und aus folgenden Vorteilen profitieren</p>
+            <ul>
+              <li>Priorisierte Darstellung bei der Übersicht. Seien Sie über den kostenlosen Zugängen</li>
+              <li>Optimierte Google-Suche für Ihren Lieferdienst</li>
+              <li>Noch weitere Funktionen kommen <b>(derzeit nur Beispieltexte für weitere Ausblicke)</b></li>
+            </ul>
+          </mat-card-content>
+          <mat-card-actions>
+            <a mat-stroked-button color="accent" routerLink="../abo">Abo ändern</a>
+            <a mat-stroked-button color="warn" routerLink="../abo">Abo kündigen</a>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+
+    </div>
+  </div>
+</div>
