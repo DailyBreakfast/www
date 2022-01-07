@@ -8,22 +8,20 @@ on:
       - next
       - pre
 
+
 jobs:
   make_release:
     name: Make Release
     runs-on: registry.gitlab.com/ayedocloudsolutions/adf:latest
     steps:
       - name: Fetch Version
-        run: semantic-release --generate-notes false --dry-run
-        with:
-          name: Versioning
-          path: |
-            package.json
-            CHANGELOG.md
+        run: |
+          semantic-release --generate-notes false --dry-run
       - name: Make Version
         run: |
           touch CHANGELOG.md
           semantic-release
+      - name: Archive Artifacts
         with:
           name: Versioning
           path: |
