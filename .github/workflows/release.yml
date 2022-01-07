@@ -1,0 +1,29 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+      - beta
+      - next
+      - pre
+
+jobs:
+  make_release:
+    name: Make Release
+    runs-on: registry.gitlab.com/ayedocloudsolutions/adf:latest
+    steps:
+      - name: Fetch Version
+        run: semantic-release --generate-notes false --dry-run
+        with:
+          path: |
+            package.json
+            CHANGELOG.md
+      - name: Make Version
+        run: |
+          touch CHANGELOG.md
+          semantic-release
+        with:
+          path: |
+            package.json
+            CHANGELOG.md
