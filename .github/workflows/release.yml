@@ -12,15 +12,17 @@ on:
 jobs:
   make_release:
     name: Make Release
-    runs-on: registry.gitlab.com/ayedocloudsolutions/adf:latest
+    runs-on: ubuntu-latest
     steps:
       - name: Fetch Version
         run: |
           semantic-release --generate-notes false --dry-run
+        uses: docker://registry.gitlab.com/ayedocloudsolutions/adf:latest
       - name: Make Version
         run: |
           touch CHANGELOG.md
           semantic-release
+        uses: docker://registry.gitlab.com/ayedocloudsolutions/adf:latest
       - name: Archive Artifacts
         with:
           name: Versioning
