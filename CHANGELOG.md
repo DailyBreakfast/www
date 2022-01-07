@@ -1,3 +1,29 @@
+## [1.1.0-next.1](https://github.com/DailyBreakfast/www/compare/v1.0.0...v1.1.0-next.1) (2022-01-07)
+
+
+### :repeat: Chores
+
+* **deps-dev:** Bump @types/node from 17.0.2 to 17.0.8 ([25ba359](https://github.com/DailyBreakfast/www/commit/25ba359b0e18bf5d64bfa4750eae38325ae5ed43))
+* **deps-dev:** Bump @typescript-eslint/eslint-plugin ([a81b49b](https://github.com/DailyBreakfast/www/commit/a81b49b38c13374d90c2c879e067b0695df33c46))
+* **deps-dev:** Bump @typescript-eslint/parser from 5.8.0 to 5.9.0 ([2cb5ab9](https://github.com/DailyBreakfast/www/commit/2cb5ab97f33dc191b6ba4bf04f58cdd85889ad5b))
+* **deps-dev:** Bump eslint from 8.5.0 to 8.6.0 ([2e09521](https://github.com/DailyBreakfast/www/commit/2e09521037920ebe1fdd6ed255db07af8f3eccd5))
+* **deps-dev:** Bump jasmine-core from 3.10.1 to 4.0.0 ([697b887](https://github.com/DailyBreakfast/www/commit/697b8877468d74c4203f1a8b5d97bd965270242e))
+* **deps-dev:** Bump jest from 27.4.5 to 27.4.7 ([11ed9d6](https://github.com/DailyBreakfast/www/commit/11ed9d6af9ee51de1c59172df05e82a1bfb7389e))
+* **deps:** Bump d3-brush from 2.1.0 to 3.0.0 ([96818c5](https://github.com/DailyBreakfast/www/commit/96818c5984108694553cb3c6af8cb0265a3c74b3))
+* **deps:** Bump d3-selection from 2.0.0 to 3.0.0 ([4396071](https://github.com/DailyBreakfast/www/commit/4396071f2f0027822be8b0007a05e3516f9d6100))
+* **deps:** Bump d3-shape from 2.1.0 to 3.0.1 ([cad5e4f](https://github.com/DailyBreakfast/www/commit/cad5e4fd09ec4349b03600bd566d4a9152034446))
+* **deps:** Bump rxjs from 7.4.0 to 7.5.1 ([2fd7fd3](https://github.com/DailyBreakfast/www/commit/2fd7fd3fd9a61189342b8ac95ecc3d9143487e7e))
+
+
+### :sparkles: Features
+
+* Cypress aktiviert ([64c6b83](https://github.com/DailyBreakfast/www/commit/64c6b83e20f7cc63b039228101740dd67601e616))
+
+
+### :bug: Fixes
+
+* Korrektur von Branches für QA ([aacc3aa](https://github.com/DailyBreakfast/www/commit/aacc3aa4dbf3c6340d2a869200cfd6e955550d49))
+
 ## 1.0.0 (2022-01-07)
 
 
@@ -50,5 +76,3 @@
 
 * Docker-Build-Time ([7a74c2e](https://gitlab.com/dailybreakfast/client/commit/7a74c2e95d743edfb9e44d87d4d395f3146bb314))
 * Docker-Build-Time ([e1649bf](https://gitlab.com/dailybreakfast/client/commit/e1649bff31f30c31f0ffb3ee09800dd54df0c99f))
-
-
