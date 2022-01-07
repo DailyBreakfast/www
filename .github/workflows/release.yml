@@ -1,4 +1,4 @@
-name: Release
+name: "Release"
 
 on:
   push:
@@ -10,22 +10,21 @@ on:
 
 
 jobs:
-  make_release:
-    name: Make Release
+  release:
+    name: Release
     runs-on: ubuntu-latest
     steps:
-      - name: Fetch Version
-        run: |
-          semantic-release --generate-notes false --dry-run
-        uses: docker://registry.gitlab.com/ayedocloudsolutions/adf:latest
-      - name: Make Version
-        run: |
-          touch CHANGELOG.md
-          semantic-release
-        uses: docker://registry.gitlab.com/ayedocloudsolutions/adf:latest
-      - name: Archive Artifacts
+      - name: Checkout
+        uses: actions/checkout@v2
         with:
-          name: Versioning
-          path: |
-            package.json
-            CHANGELOG.md
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 'lts/*'
+      - name: Install dependencies
+        run: npm ci
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: npx semantic-release

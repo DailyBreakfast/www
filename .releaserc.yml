@@ -49,7 +49,7 @@ plugins:
     - assets:
         - "CHANGELOG.md"
         - "package.json"
-  - - "@semantic-release/gitlab"
+  - - "@semantic-release/github"
     - assets:
         - path: "VERSION.txt"
           label: "Release Version"
