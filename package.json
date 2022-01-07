@@ -1,6 +1,6 @@
 {
   "name": "daily-breakfast",
-  "version": "1.0.0-next.8",
+  "version": "1.0.0",
   "scripts": {
     "cy:open": "cypress open",
     "cy:run": "cypress run",

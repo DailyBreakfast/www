@@ -1,3 +1,20 @@
+## 1.0.0 (2022-01-07)
+
+
+### :sparkles: Features
+
+* Integrieren von Github-Workflow ([2078860](https://github.com/DailyBreakfast/www/commit/2078860b1c0a972755ea87ccc633326e3a4c5bc3))
+
+
+### :bug: Fixes
+
+* Add Packages ([be55c31](https://github.com/DailyBreakfast/www/commit/be55c312b9ae5e3a1d7c35b90678c9f360573248))
+* Add Semantic-Release-Plugins ([d48f3c5](https://github.com/DailyBreakfast/www/commit/d48f3c5cf30d1ca126b793a450c4858f00c0b137))
+* Extract Archive-Job ([3266369](https://github.com/DailyBreakfast/www/commit/3266369bf1505d34133cf772fc0e5bccc383762e))
+* Include uses ([d1b1737](https://github.com/DailyBreakfast/www/commit/d1b1737a83f32cb0578da613343e86c0dce38118))
+* Korrektur von Flow-Name ([48270e1](https://github.com/DailyBreakfast/www/commit/48270e17f5092d20ba28f4df7f52a8e5bbe9c020))
+* Tokens fixed ([269f299](https://github.com/DailyBreakfast/www/commit/269f2993e9a6fca8b1316d21b6f6e005bb7fc180))
+
 ## [1.0.0-next.8](https://gitlab.com/dailybreakfast/client/compare/v1.0.0-next.7...v1.0.0-next.8) (2022-01-05)
 
 
