@@ -79,6 +79,7 @@
     "jest": "^27.4.7",
     "jest-junit": "^13.0.0",
     "jest-preset-angular": "^11.0.1",
+    "piscina": "^3.2.0",
     "replace-json-property": "^1.8.0",
     "semantic-release": "^18.0.1",
     "start-server-and-test": "^1.14.0",
