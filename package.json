@@ -73,6 +73,7 @@
     "conventional-changelog-conventionalcommits": "^4.6.3",
     "cypress": "latest",
     "cypress-axe": "^0.13.0",
+    "esbuild": "^0.14.10",
     "eslint": "^8.6.0",
     "jasmine-core": "~4.0.0",
     "jest": "^27.4.7",
