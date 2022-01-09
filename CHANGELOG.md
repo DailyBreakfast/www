@@ -1,3 +1,24 @@
+## [1.1.0-next.5](https://github.com/DailyBreakfast/www/compare/v1.1.0-next.4...v1.1.0-next.5) (2022-01-09)
+
+
+### :repeat: Chores
+
+* Change Container-Version ([e564ad5](https://github.com/DailyBreakfast/www/commit/e564ad56145b67e4735260cb9fa427ad66281162))
+* **deps-dev:** Bump @semantic-release/release-notes-generator ([c50af6b](https://github.com/DailyBreakfast/www/commit/c50af6bc00a454e09d73a384c9afc5296a95fa07))
+* **deps:** Bump d3-array from 2.12.1 to 3.1.1 ([ca55279](https://github.com/DailyBreakfast/www/commit/ca55279cfeb465d74b98713ea52c8ba267e2dd88))
+* **deps:** Bump d3-format from 2.0.0 to 3.1.0 ([fa46cba](https://github.com/DailyBreakfast/www/commit/fa46cba3939eb2adcfa86ed17c1ee1c329b4ad9d))
+* **deps:** Bump d3-hierarchy from 2.0.0 to 3.1.1 ([e58ab72](https://github.com/DailyBreakfast/www/commit/e58ab72233d2e3b27b97f6f4c919d3cfe1b5caa5))
+* **deps:** Bump d3-scale from 3.3.0 to 4.0.2 ([1aefc5b](https://github.com/DailyBreakfast/www/commit/1aefc5bac09fb39c599b5cd5d0c2dcd4aeb914ee))
+* Install esbuild for dependencies of Cypress ([b4caa97](https://github.com/DailyBreakfast/www/commit/b4caa97a227102e8810b47b04cc52a690462676e))
+* Install piscina for dependencies of Cypress ([ac883e6](https://github.com/DailyBreakfast/www/commit/ac883e6e3287b390af791b1d9e57faeb73a98396))
+* Korrektur von Angular-Package size ([2c3fa79](https://github.com/DailyBreakfast/www/commit/2c3fa79998c0b2040ce27a78e6b7a1a2a747b99f))
+* Korrektur von Cypress-Call ([2a2fdf1](https://github.com/DailyBreakfast/www/commit/2a2fdf1e01668acffd7ae55a50fd292643a5d14b))
+
+
+### :sparkles: Features
+
+* Colorsystem zu M3-Logik geändert ([f842181](https://github.com/DailyBreakfast/www/commit/f8421810351236eeb5927374ab923a97c74facfa))
+
 ## [1.1.0-next.4](https://github.com/DailyBreakfast/www/compare/v1.1.0-next.3...v1.1.0-next.4) (2022-01-07)
 
 
