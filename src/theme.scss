@@ -3,11 +3,10 @@
 
 @include mat.core();
 
-$my-primary: mat.define-palette(colors.$mat-primary, 800);
-$my-accent: mat.define-palette(colors.$mat-accent, 800);
-$my-warn: mat.define-palette(colors.$mat-warning, 500);
+$my-primary: mat.define-palette(colors.$mat-primary, 900);
+$my-accent: mat.define-palette(colors.$mat-accent, 900);
 $my-danger: mat.define-palette(colors.$mat-danger, 900);
-$my-triadic: mat.define-palette(colors.$mat-triadic, 300);
+$my-triadic: mat.define-palette(colors.$mat-triadic, 700);
 
 $my-theme: mat.define-light-theme((
   color: (

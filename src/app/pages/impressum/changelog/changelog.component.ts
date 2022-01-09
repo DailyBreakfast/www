@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MarkdownService } from 'ngx-markdown';
 
 @Component({
   selector: 'db-changelog',
@@ -8,7 +7,7 @@ import { MarkdownService } from 'ngx-markdown';
 })
 export class ChangelogComponent implements OnInit {
 
-  constructor(private markdownService: MarkdownService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }

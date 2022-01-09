@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { navigation } from 'src/app/shared/objects/navigation';
+import { navigation } from '../../shared/objects/navigation';
 
 @Component({
   selector: 'db-home',

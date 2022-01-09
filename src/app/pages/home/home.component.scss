@@ -17,11 +17,10 @@
   }
 
   .hero-content {
-    background-color: rgba(255, 255, 255, .8);
     padding: 3rem;
     border-radius: 1rem;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 3px 9px rgba(0, 0, 0, .08);
+    background-color: mat.get-color-from-palette(myt.$my-primary, 50) !important;
+    color: mat.get-color-from-palette(myt.$my-primary, 100-contrast) !important;
 
     h1 {
       font-size: 4rem;
@@ -121,8 +120,8 @@ mat-card-header {
   }
 }
 .footer {
-  background-color: mat.get-color-from-palette(myt.$my-primary, 800) !important;
-  color: mat.get-color-from-palette(myt.$my-primary, 800-contrast) !important;
+  background-color: mat.get-color-from-palette(myt.$my-primary, 50) !important;
+  color: mat.get-color-from-palette(myt.$my-primary, 100-contrast) !important;
   h3 {
     font-weight: bold;
   }

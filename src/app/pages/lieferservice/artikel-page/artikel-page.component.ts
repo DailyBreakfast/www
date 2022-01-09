@@ -15,9 +15,4 @@ export class ArtikelPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  toggleElement(event: Event): void {
-    console.log(event);
-    let target = event.target ||event.srcElement ||event.currentTarget;
-  }
-
 }

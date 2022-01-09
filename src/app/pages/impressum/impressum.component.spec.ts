@@ -1,4 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatDialog } from '@angular/material/dialog';
+import { AppModule } from '../../app.module';
+import {APP_BASE_HREF} from '@angular/common';
 
 import { ImpressumComponent } from './impressum.component';
 
@@ -8,7 +11,9 @@ describe('ImpressumComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ImpressumComponent ]
+      declarations: [ ImpressumComponent ],
+      imports: [AppModule],
+      providers: [MatDialog, {provide: APP_BASE_HREF, useValue: '/'}]
     })
     .compileComponents();
   });
@@ -21,5 +26,9 @@ describe('ImpressumComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('version', () => {
+    expect(component.version).toContain('.');
   });
 });

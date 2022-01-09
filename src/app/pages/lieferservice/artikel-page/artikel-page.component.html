@@ -68,12 +68,12 @@
     </div>
 
     <div class="artikel-groups">
-      <div class="container" fxLayout="column" fxFlex="100%" fxFlex.lt-md="95%">
+      <div class="container" fxLayout="column" fxFlex="70vw" fxFlex.lt-md="95%">
         <db-artikel *ngFor="let item of lieferdienste" fxLayout="row wrap"></db-artikel>
       </div>
     </div>
     <div>
-      <div class="container" fxFlex="100%" fxFlex.lt-md="95%">
+      <div class="container" fxFlex="70vw" fxFlex.lt-md="95%">
         <h4><b>Impressum</b></h4>
         <p>Brandname<br>
           Musterstraße 999<br>
@@ -175,7 +175,7 @@
           <small>Du hast den <b>Mindestbestellwert von <span>10,00</span> €</b> erreicht und kannst jetzt
             fortfahren.</small>
         </ng-container>
-        <button mat-flat-button color="accent" [disabled]="!filled">Bestellen</button>
+        <button mat-flat-button color="primary" [disabled]="!filled">Bestellen</button>
       </div>
     </div>
   </div>
