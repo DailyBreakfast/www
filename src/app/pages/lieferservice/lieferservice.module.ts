@@ -22,6 +22,7 @@ import { LieferserviceComponent } from './lieferservice.component';
 import { DienstleisterPageComponent } from './dienstleister-page/dienstleister-page.component';
 import { BestellenPageComponent } from './bestellen-page/bestellen-page.component';
 import { ArtikelPageComponent } from './artikel-page/artikel-page.component';
+import { ImprintComponent } from './artikel-page/imprint/imprint.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { ArtikelPageComponent } from './artikel-page/artikel-page.component';
     LieferserviceComponent,
     DienstleisterPageComponent,
     BestellenPageComponent,
-    ArtikelPageComponent
+    ArtikelPageComponent,
+    ImprintComponent
   ],
   imports: [
     CommonModule,
