@@ -1,3 +1,19 @@
+## [1.1.0-next.6](https://github.com/DailyBreakfast/www/compare/v1.1.0-next.5...v1.1.0-next.6) (2022-01-10)
+
+
+### :repeat: Chores
+
+* **deps-dev:** Bump @types/jasmine from 3.10.2 to 3.10.3 ([11f5e97](https://github.com/DailyBreakfast/www/commit/11f5e972a2d7b1a80c795bf462b44876202df671))
+* **deps:** Bump @swimlane/ngx-charts from 19.2.0 to 20.0.1 ([b93d473](https://github.com/DailyBreakfast/www/commit/b93d473bcbb8c857d7bb248ce8011bcfbe340363))
+* **deps:** Bump d3 from 7.2.1 to 7.3.0 ([973e25f](https://github.com/DailyBreakfast/www/commit/973e25fae39046e89aa1b3f1912a7442bbdd544e))
+* **deps:** Bump d3-color from 2.0.0 to 3.0.1 ([4f0ea5d](https://github.com/DailyBreakfast/www/commit/4f0ea5d94b436c30a5c4cf9346cc6ef1cf4d2fa8))
+* **deps:** Bump d3-shape from 3.0.1 to 3.1.0 ([0a561e7](https://github.com/DailyBreakfast/www/commit/0a561e78057c3d9364fc2df2d4f0c20028471a19))
+
+
+### :bug: Fixes
+
+* creat Dialogs for Imprint and fixes ([f87730b](https://github.com/DailyBreakfast/www/commit/f87730b26f793ca1fce9e4a11ef7c3ff4721211b))
+
 ## [1.1.0-next.5](https://github.com/DailyBreakfast/www/compare/v1.1.0-next.4...v1.1.0-next.5) (2022-01-09)
 
 
