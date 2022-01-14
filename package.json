@@ -54,7 +54,7 @@
     "@angular-eslint/schematics": "13.0.1",
     "@angular-eslint/template-parser": "13.0.1",
     "@angular/cli": "~13.1.3",
-    "@angular/compiler-cli": "~13.1.1",
+    "@angular/compiler-cli": "~13.1.2",
     "@briebug/cypress-schematic": "^5.0.1",
     "@semantic-release/changelog": "github:semantic-release/changelog",
     "@semantic-release/commit-analyzer": "github:semantic-release/commit-analyzer",
